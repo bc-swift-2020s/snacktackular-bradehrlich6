@@ -56,5 +56,7 @@
 	<string>Snacktacular needs the devices location to display on Map.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Snacktacular needs the devices location to display on Map.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Snacktacular needs the devices location to display on Map.</string>
 </dict>
 </plist>

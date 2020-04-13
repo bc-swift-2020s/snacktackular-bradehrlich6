@@ -22,8 +22,8 @@ class SpotDetailViewController: UIViewController {
     
     var spot: Spot!
     let regionDistance: CLLocationDistance = 750
-    let locationManager: CLLocationManager!
-    var currentLocation: CLLocation
+    var locationManager: CLLocationManager!
+    var currentLocation: CLLocation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +51,13 @@ class SpotDetailViewController: UIViewController {
         mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(spot)
         mapView.setCenter(spot.coordinate, animated: true)
+    }
+    
+    func showAlert(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     func leaveViewController() {
@@ -124,6 +131,7 @@ extension SpotDetailViewController: GMSAutocompleteViewControllerDelegate {
 
 }
 extension SpotDetailViewController: CLLocationManagerDelegate {
+    
     func getLocation(){
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -133,18 +141,18 @@ extension SpotDetailViewController: CLLocationManagerDelegate {
         switch status{
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
-        case .authorizedAlways,.authorizedWhenInUse:
+        case .authorizedAlways, .authorizedWhenInUse:
             locationManager.requestLocation()
         case .denied:
             showAlertToPrivacySettings(title: "Need Location Access", message: "Need Location Access")
         case .restricted:
-            print("Error")
+            showAlert(title: "Location Services Denied", message: "It may be parental controls restricting the App")
         }
     }
     
     func showAlertToPrivacySettings(title: String, message: String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        guard let settingsURL = URL(string: UIApplicationOpenSettingsURLString) else {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
             print("Something is wrong")
             return
         }
@@ -167,22 +175,26 @@ extension SpotDetailViewController: CLLocationManagerDelegate {
         var name = ""
         var address = ""
         currentLocation = locations.last
-        spot.coordinate = currentLocation?.coordinate
-        geoCoder.reverseGeocodeLocation(currentLocation) {placemarks, error in
+        spot.coordinate = currentLocation.coordinate
+        geoCoder.reverseGeocodeLocation(currentLocation, completionHandler: { placemarks, error in
             if placemarks != nil{
                 let placemark = placemarks?.last
                 name = placemark?.name ?? "name unknown"
-                
+                //import contacts
                 if let postalAddress = placemark?.postalAddress{
                     address = CNPostalAddressFormatter.string(from: postalAddress, style: .mailingAddress)
                 }
-            } else{
-                print("Error")
+            } else {
+                print("Error: \(error!.localizedDescription)")
             }
             self.spot.name = name
             self.spot.address = address
             self.updateUserInterface()
-        }
+        })
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to get user Location \(self.spot.address), \(self.spot.name)")
+        
     }
 }
 
