@@ -18,10 +18,17 @@
 		3E8390E5206597F600512DEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8390E3206597F600512DEA /* Main.storyboard */; };
 		3E8390E7206597F600512DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8390E6206597F600512DEA /* Assets.xcassets */; };
 		3E8390EA206597F600512DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8390E8206597F600512DEA /* LaunchScreen.storyboard */; };
+		A447697C244A6B2600D57E5F /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447697B244A6B2600D57E5F /* Double+roundTo.swift */; };
 		A45E3CE42443A78100048834 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E3CE32443A78100048834 /* Spot.swift */; };
 		A45E3CE62443A8BE00048834 /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E3CE52443A8BE00048834 /* Spots.swift */; };
 		A45E3CE82443C96F00048834 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A45E3CE72443C96E00048834 /* GoogleService-Info.plist */; };
+		A480D74524523856006FF9C7 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480D74424523856006FF9C7 /* Reviews.swift */; };
+		A480D74924524B2E006FF9C7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480D74824524B2E006FF9C7 /* Photo.swift */; };
+		A480D74B24524CF7006FF9C7 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480D74A24524CF7006FF9C7 /* Photos.swift */; };
 		A4A164952444F32F00F5EC65 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A164942444F32F00F5EC65 /* APIKeys.swift */; };
+		A4E22A25244F9B86007ADB69 /* UIView +addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E22A24244F9B86007ADB69 /* UIView +addBorder.swift */; };
+		A4E22A292450E466007ADB69 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E22A282450E466007ADB69 /* ReviewTableViewController.swift */; };
+		A4E22A2B24510758007ADB69 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E22A2A24510758007ADB69 /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +46,17 @@
 		3E8390E9206597F600512DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E8390EB206597F600512DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CAD8117C542DB01A3613CB1 /* Pods_Snacktacular.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snacktacular.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A447697B244A6B2600D57E5F /* Double+roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+roundTo.swift"; sourceTree = "<group>"; };
 		A45E3CE32443A78100048834 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		A45E3CE52443A8BE00048834 /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		A45E3CE72443C96E00048834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A480D74424523856006FF9C7 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		A480D74824524B2E006FF9C7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		A480D74A24524CF7006FF9C7 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		A4A164942444F32F00F5EC65 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		A4E22A24244F9B86007ADB69 /* UIView +addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView +addBorder.swift"; sourceTree = "<group>"; };
+		A4E22A282450E466007ADB69 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		A4E22A2A24510758007ADB69 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C85CF57A6CA56C81CB887C3A /* Pods-Snacktacular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.debug.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,12 +96,19 @@
 				3E8390DF206597F600512DEA /* AppDelegate.swift */,
 				A45E3CE32443A78100048834 /* Spot.swift */,
 				A45E3CE52443A8BE00048834 /* Spots.swift */,
+				A4E22A2A24510758007ADB69 /* Review.swift */,
+				A480D74424523856006FF9C7 /* Reviews.swift */,
+				A480D74824524B2E006FF9C7 /* Photo.swift */,
+				A480D74A24524CF7006FF9C7 /* Photos.swift */,
 				3E8390E1206597F600512DEA /* SpotsListViewController.swift */,
 				3E0F960920659D9000AE450D /* SpotsTableViewCell.swift */,
 				3E0F960B2065A17500AE450D /* SpotDetailViewController.swift */,
 				3E0F960D2065AB6400AE450D /* SpotReviewsTableViewCell.swift */,
 				3E0F960F2065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift */,
+				A4E22A282450E466007ADB69 /* ReviewTableViewController.swift */,
 				A4A164942444F32F00F5EC65 /* APIKeys.swift */,
+				A447697B244A6B2600D57E5F /* Double+roundTo.swift */,
+				A4E22A24244F9B86007ADB69 /* UIView +addBorder.swift */,
 				3E8390E3206597F600512DEA /* Main.storyboard */,
 				3E8390E6206597F600512DEA /* Assets.xcassets */,
 				3E8390E8206597F600512DEA /* LaunchScreen.storyboard */,
@@ -287,11 +308,18 @@
 				3E0F96102065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift in Sources */,
 				3E0F960C2065A17500AE450D /* SpotDetailViewController.swift in Sources */,
 				A4A164952444F32F00F5EC65 /* APIKeys.swift in Sources */,
+				A480D74B24524CF7006FF9C7 /* Photos.swift in Sources */,
+				A447697C244A6B2600D57E5F /* Double+roundTo.swift in Sources */,
 				3E0F960E2065AB6400AE450D /* SpotReviewsTableViewCell.swift in Sources */,
 				3E0F960A20659D9000AE450D /* SpotsTableViewCell.swift in Sources */,
+				A4E22A292450E466007ADB69 /* ReviewTableViewController.swift in Sources */,
+				A4E22A2B24510758007ADB69 /* Review.swift in Sources */,
+				A480D74924524B2E006FF9C7 /* Photo.swift in Sources */,
 				A45E3CE42443A78100048834 /* Spot.swift in Sources */,
 				3E8390E0206597F600512DEA /* AppDelegate.swift in Sources */,
 				A45E3CE62443A8BE00048834 /* Spots.swift in Sources */,
+				A4E22A25244F9B86007ADB69 /* UIView +addBorder.swift in Sources */,
+				A480D74524523856006FF9C7 /* Reviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9937BJYLPH;
+				DEVELOPMENT_TEAM = 9NV53TL2TH;
 				INFOPLIST_FILE = Snacktacular/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -447,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9937BJYLPH;
+				DEVELOPMENT_TEAM = 9NV53TL2TH;
 				INFOPLIST_FILE = Snacktacular/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,10 +1,7 @@
 //
 //  Spots.swift
 //  Snacktacular
-//
-//  Created by Brad Ehrlich on 4/12/20.
-//  Copyright © 2020 John Gallaugher. All rights reserved.
-//
+
 
 import Foundation
 import Firebase

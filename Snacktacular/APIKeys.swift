@@ -1,10 +1,7 @@
 //
 //  APIKeys.swift
 //  Snacktacular
-//
-//  Created by Brad Ehrlich on 4/13/20.
-//  Copyright © 2020 John Gallaugher. All rights reserved.
-//
+
 
 import Foundation
 
